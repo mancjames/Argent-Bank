@@ -27,7 +27,7 @@ export default function Home({}: Props) {
         <div className="feature-item">
           <img
             src="./img/icon-money.png"
-            alt="Chat Icon"
+            alt="Money Icon"
             className="feature-icon"
           />
           <h3 className="feature-item-title">More savings means higher rates</h3>
@@ -38,7 +38,7 @@ export default function Home({}: Props) {
         <div className="feature-item">
           <img
             src="./img/icon-security.png"
-            alt="Chat Icon"
+            alt="Security Icon"
             className="feature-icon"
           />
           <h3 className="feature-item-title">Security you can trust</h3>
