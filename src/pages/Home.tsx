@@ -4,7 +4,7 @@ type Props = {}
 
 export default function Home({}: Props) {
   return (
-    <main>
+    <main className="main">
       <div className="hero">
         <section className="hero-content">
           <h2 className="sr-only">Promoted Content</h2>
