@@ -1,8 +1,6 @@
 import React from 'react'
 
-type Props = {}
-
-export default function Profile({}: Props) {
+export default function Profile() {
   return (
     <main className="main bg-dark">
       <div className="header">

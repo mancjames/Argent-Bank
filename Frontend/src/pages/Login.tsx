@@ -3,10 +3,11 @@ import { Navigate } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../redux/hooks';
 import { fetch } from '../redux/features/authSlice';
 
-
-export default function Login(): JSX.Element {
-  const auth = useAppSelector((state) => state.auth);
+export default function Login(): JSX.Element{
+  const  auth  = useAppSelector((state) => state.auth);
 	const dispatch = useAppDispatch();
+
+  const { isSuccess, isError } = auth;
 
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
@@ -15,10 +16,9 @@ export default function Login(): JSX.Element {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     dispatch(fetch({email, password}))
-    console.log('works')
   };
 
-  if (auth.isSuccess) return <Navigate to="/profile" />;
+  if (isSuccess) return <Navigate to="/profile" />;
 
   return (
     <main className="main bg-dark">
@@ -50,6 +50,7 @@ export default function Login(): JSX.Element {
           <button className="sign-in-button" type="submit">
             Sign In
           </button>
+          {isError ? <p className="sign-in-error">Sorry user not recognised</p> : null}
         </form>
       </section>
     </main>

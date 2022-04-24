@@ -31,7 +31,11 @@ const authSlice = createSlice({
 		},
 	},
 	extraReducers: (builder) => {
+    builder.addCase(fetch.pending, (state)=>{
+      state.isFetching = true;
+    });
 		builder.addCase(fetch.fulfilled, (state, { payload }) => {
+      console.log(payload)
 			state.isSuccess = true;
 			state.isFetching = false;
 			state.isError = null;
@@ -40,9 +44,11 @@ const authSlice = createSlice({
 		builder.addCase(fetch.rejected, (state, { error }) => {
 			state.isFetching = false;
 			state.isError = error.message;
+      console.log(error)
 		});
 	},
 });
 
-export const { logout } = authSlice.actions;
+export const { logout } = authSlice.actions
+
 export default authSlice.reducer;

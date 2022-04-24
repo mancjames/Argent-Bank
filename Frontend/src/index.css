@@ -178,6 +178,10 @@ body {
   padding: 2rem;
 }
 
+.sign-in-error {
+  margin: .5rem 0;
+}
+
 .sign-in-icon {
   font-size: 5rem;
 }
