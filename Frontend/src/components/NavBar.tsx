@@ -1,6 +1,13 @@
 import React from 'react'
+import { useAppDispatch, useAppSelector } from '../redux/hooks';
+import { logout } from '../redux/features/authSlice';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
+  const auth  = useAppSelector((state) => state.auth);
+  const user = useAppSelector((state) => state.user)
+  const dispatch = useAppDispatch();
+
   return (
     <nav className="main-nav">
       <a className="main-nav-logo" href="./">
@@ -12,10 +19,18 @@ const NavBar = () => {
         <h1 className="sr-only">Argent Bank</h1>
       </a>
       <div>
-        <a className="main-nav-item" href="./login">
+      {!auth.isSuccess ? (
+        <Link className="main-nav-item" to="./login">
           <i className="fa fa-user-circle"></i>
           Sign In
-        </a>
+        </Link>
+      ) : (
+        <Link className="main-nav-item" to="/" onClick={()=>dispatch(logout())}>
+          <span className="main-nav-username">{user.firstName}</span>
+          <i className="fa fa-sign-out"></i>
+          Sign Out
+        </Link>
+      )}
       </div>
     </nav>
   )

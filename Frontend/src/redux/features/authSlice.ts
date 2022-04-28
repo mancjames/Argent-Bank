@@ -35,7 +35,6 @@ const authSlice = createSlice({
       state.isFetching = true;
     });
 		builder.addCase(fetch.fulfilled, (state, { payload }) => {
-      console.log(payload)
 			state.isSuccess = true;
 			state.isFetching = false;
 			state.isError = null;
