@@ -15,6 +15,7 @@ export default function Profile() {
   const [isEditing, setIsEditing] = useState(false);
 	const [firstName, setFirstName] = useState('');
 	const [lastName, setLastName] = useState('');
+  const [error, setError] = useState(false)
 
 	useEffect(() => {
 		dispatch(getUserName());
@@ -23,9 +24,12 @@ export default function Profile() {
   const handleSubmit = (e: React.SyntheticEvent) => {
 		e.preventDefault();
 		if (firstName.length >= 1 && lastName.length >= 1) {
+      setError(false)
 			dispatch(editUserName({ firstName, lastName }));
 			setIsEditing(false);
-		}
+		} else {
+      setError(true)
+    }
 	};
 
   if (!auth.isSuccess) return <Navigate to="/login" />;
@@ -70,6 +74,9 @@ export default function Profile() {
 								onChange={(e) => {setLastName(e.currentTarget.value)}}
 							/>
 						</div>
+            <div className="header-error">
+              {error ? <span>Please fill out both boxes with at least 1 letter</span> : null}
+            </div>
 						<div className='header-buttons'>
 							<button className='edit-button' type='submit'>
 								Save

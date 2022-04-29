@@ -60,6 +60,7 @@ const userSlice = createSlice({
 		});
 		builder.addCase(editUserName.rejected, (state, { error }) => {
 			state.error = error.message;
+            console.log(error)
 		});
     }
 })
