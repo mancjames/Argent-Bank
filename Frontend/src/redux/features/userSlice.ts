@@ -32,12 +32,12 @@ export const editUserName = createAsyncThunk(
 		firstName: string;
 		lastName: string;
 	}) => {
-		const res = await userAPI.put(
+		await userAPI.put(
 			'/profile',
 			{ firstName, lastName },
 			{ headers: { Authorization: `Bearer ${token}` } }
 		);
-		return { ...res.data.body, firstName, lastName };
+		return { firstName, lastName };
 	}
 );
 
