@@ -12,11 +12,11 @@ const initialState: userState = {
     lastName: '',
     error: null,
 }
-const token = localStorage.getItem('token');
 
 export const getUserName = createAsyncThunk(
 	'user/getUserName',
 	async () => {
+		const token = localStorage.getItem('token');
 		const res = await userAPI.post('/profile', {},
         {headers: { Authorization: `Bearer ${token}`}});
 		return res.data;
@@ -32,6 +32,7 @@ export const editUserName = createAsyncThunk(
 		firstName: string;
 		lastName: string;
 	}) => {
+		const token = localStorage.getItem('token');
 		await userAPI.put(
 			'/profile',
 			{ firstName, lastName },

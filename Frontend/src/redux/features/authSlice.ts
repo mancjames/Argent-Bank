@@ -26,24 +26,24 @@ const authSlice = createSlice({
 	initialState,
 	reducers: {
 		logout(state) {
-			localStorage.setItem('token', '');
+			localStorage.removeItem('token');
 			return (state = initialState);
 		},
 	},
 	extraReducers: (builder) => {
-    builder.addCase(fetch.pending, (state)=>{
-      state.isFetching = true;
-    });
+		builder.addCase(fetch.pending, (state)=>{
+		state.isFetching = true;
+		});
 		builder.addCase(fetch.fulfilled, (state, { payload }) => {
+			localStorage.setItem('token', payload.body.token);
 			state.isSuccess = true;
 			state.isFetching = false;
 			state.isError = null;
-			localStorage.setItem('token', payload.body.token);
 		});
 		builder.addCase(fetch.rejected, (state, { error }) => {
 			state.isFetching = false;
 			state.isError = error.message;
-      console.log(error)
+      	console.log(error)
 		});
 	},
 });
