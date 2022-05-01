@@ -12,7 +12,7 @@ This project was designed to connect to a backend API using React and Redux. Det
 
 • Users can edit the profile and persist the data to the database. 
 
-As part of this project, I also created a swagger.yaml file with recommendations for the API design of the second phase of teh project, which would allow the user to do the following:
+As part of this project, I also created a swagger.yaml file with recommendations for the API design of the second phase of the project, which would allow the user to do the following:
 
 • View all of their transactions for the current month.
 
@@ -49,7 +49,7 @@ This project has been split into 2 seperate sections - Backend and Frontend.
 
 ### 2 - Backend Installation
 
-Following completing the above, change directories into the Backend folder. Once you have done this complete the following:
+Following completing the above, change directories into the Backend folder in your terminal. Once you have done this complete the following:
 
 ```bash
 # Install dependencies
@@ -88,11 +88,11 @@ Please note that you'll need the backend server running to allow your frontend t
 
 You'll need to complete the following to install the frontend of this project:
 
-change directories in your terminal to the frontend folder, use the following to install the required dependencies:
+In your terminal, change directories to the frontend folder and use the following to install the required dependencies:
 
 ```yarn install```
 
-Once done, you can launch the front-end application on port 3000(default) by running the following command:
+Once done, you can launch the front-end application on port http://locahost:3000 by running the following command:
 
 ```yarn start```
 
