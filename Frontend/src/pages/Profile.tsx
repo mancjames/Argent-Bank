@@ -26,6 +26,8 @@ export default function Profile() {
 		if (firstName.length >= 1 && lastName.length >= 1) {
       setError(false)
 			dispatch(editUserName({ firstName, lastName }));
+      setFirstName('');
+      setLastName('');
 			setIsEditing(false);
 		} else {
       setError(true)
