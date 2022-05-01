@@ -62,7 +62,7 @@ npm run dev:server
 npm run populate-db
 ```
 
-Your server should now be running at http://locahost:3001 and you will now have two users in your MongoDB database!
+Your server should now be running at http://localhost:3001 and you will now have two users in your MongoDB database!
 
 ## Populated Database Data
 
@@ -92,7 +92,7 @@ In your terminal, change directories to the frontend folder and use the followin
 
 ```yarn install```
 
-Once done, you can launch the front-end application on port http://locahost:3000 by running the following command:
+Once done, you can launch the front-end application on port http://localhost:3000 by running the following command:
 
 ```yarn start```
 
