@@ -3,18 +3,24 @@
 This project was designed to connect to a backend API using React and Redux. Details of the original repo with details of the backend can be found [here](https://github.com/OpenClassrooms-Student-Center/Project-10-Bank-API). The main requirements to complete were as follows:
 
 • Users can visit the homepage.
+
 • Users can log in to the system.
+
 • Users can log out of the system.
+
 • Users can only see information related to their own profile after logging in successfully.
+
 • Users can edit the profile and persist the data to the database. 
 
 As part of this project, I also created a swagger.yaml file with recommendations for the API design of the second phase of teh project, which would allow the user to do the following:
 
 • View all of their transactions for the current month.
+
 • View additional details of a transaction in an additional view.
+
 • Add, change, or remove additional information about a transaction.
 
-designs of what this would look like have been included in the 'designs/wirefames' section of the repo
+Designs of what this would look like have been included in the 'designs/wirefames' section of the repo
 
 ### Technologies
 
@@ -37,7 +43,7 @@ designs of what this would look like have been included in the 'designs/wirefame
 
 Clone the repository of SportSee front-end in your chosen location using the following command:
 
-```git clone https://github.com/mancjames/Argent-Bank.git``
+```git clone https://github.com/mancjames/Argent-Bank.git```
 
 This project has been split into 2 seperate sections - Backend and Frontend.
 
@@ -78,7 +84,9 @@ Once you run the `populate-db` script, you should have two users in your databas
 
 ### 3 - Frontend Installation
 
-Once you have your backend server running, you'll be able to do the following to get the frontend running:
+Please note that you'll need the backend server running to allow your frontend to work correctly. Failure to do this will result in a network error when you attempt to try and log in on the sign in page.
+
+You'll need to complete the following to install the frontend of this project:
 
 change directories in your terminal to the frontend folder, use the following to install the required dependencies:
 
