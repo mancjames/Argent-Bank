@@ -1,32 +1,49 @@
 # Project #10 - Argent Bank API
 
-This codebase contains the code needed to run the backend for Argent Bank.
+This project was designed to connect to a backend API using React and Redux. Details of the original repo with details of the backend can be found [here](https://github.com/OpenClassrooms-Student-Center/Project-10-Bank-API). The main requirements to complete were as follows:
 
-## Getting Started
+• Users can visit the homepage.
+• Users can log in to the system.
+• Users can log out of the system.
+• Users can only see information related to their own profile after logging in successfully.
+• Users can edit the profile and persist the data to the database. 
 
+As part of this project, I also created a swagger.yaml file with recommendations for the API design of the second phase of teh project, which would allow the user to do the following:
+
+• View all of their transactions for the current month.
+• View additional details of a transaction in an additional view.
+• Add, change, or remove additional information about a transaction.
+
+designs of what this would look like have been included in the 'designs/wirefames' section of the repo
+
+### Technologies
+
+• [React](https://reactjs.org)
+
+• [Typescript](https://www.typescriptlang.org/)
+
+• [Redux Toolkit](https://redux-toolkit.js.org/)
+
+• [React Redux](https://react-redux.js.org/)
 ### Prerequisites
 
-Argent Bank uses the following tech stack:
+• yarn
 
-- [Node.js v12](https://nodejs.org/en/)
-- [MongoDB Community Server](https://www.mongodb.com/try/download/community)
+• Node v16
 
-Please make sure you have the right versions and download both packages. You can verify this by using the following commands in your terminal:
+• [MongoDB Community](https://www.mongodb.com/try/download/community)
 
-```bash
-# Check Node.js version
-node --version
+### 1 - Installation
 
-# Check Mongo version
-mongo --version
-```
+Clone the repository of SportSee front-end in your chosen location using the following command:
 
-### Instructions
+```git clone https://github.com/mancjames/Argent-Bank.git``
 
-1. Fork this repo
-1. Clone the repo onto your computer
-1. Open a terminal window in the cloned project
-1. Run the following commands:
+This project has been split into 2 seperate sections - Backend and Frontend.
+
+### 2 - Backend Installation
+
+Following completing the above, change directories into the Backend folder. Once you have done this complete the following:
 
 ```bash
 # Install dependencies
@@ -59,6 +76,16 @@ Once you run the `populate-db` script, you should have two users in your databas
 - Email: `steve@rogers.com`,
 - Password: `password456`
 
-## API Documentation
+### 3 - Frontend Installation
 
-To learn more about how the API works, once you have started your local environment, you can visit: http://localhost:3001/api-docs
+Once you have your backend server running, you'll be able to do the following to get the frontend running:
+
+change directories in your terminal to the frontend folder, use the following to install the required dependencies:
+
+```yarn install```
+
+Once done, you can launch the front-end application on port 3000(default) by running the following command:
+
+```yarn start```
+
+For logging in purposes, please use the details provided above to access the two seperate accounts.
