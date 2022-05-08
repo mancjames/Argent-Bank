@@ -35,7 +35,7 @@ paths:
             $ref: '#/definitions/Transactions'
         '400':
           description: Invalid Fields
-          '404':
+        '404':
           description: Transaction not found
         '500':
           description: Internal Server Error
@@ -170,7 +170,7 @@ paths:
           required: true
         - in: path
           name: transactionId
-          type: integer
+          type: string
           required: true
           description: "ID of the user selected transaction"
       responses:
@@ -191,23 +191,19 @@ definitions:
   Transactions:
     type: object
     properties:
-      id:
+      transactionid:
+        type: string
+      date:
+        type: string
+      description:
+        type: string
+      amount:
         type: integer
-        format: int32
-      transactions:
-        type: object
-        properties:
-          date:
-            type: string
-          description:
-            type: string
-          amount:
-            type: integer
-          balance:
-            type: integer
-          type:
-            type: string
-          category:
-            type: string
-          notes:
-            type: string
+      balance:
+        type: integer
+      type:
+        type: string
+      category:
+        type: string
+      notes:
+        type: string
